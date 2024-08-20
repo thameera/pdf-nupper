@@ -36,9 +36,8 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False):
                 page.scale_by(scale)
 
                 # Adjust the vertical position to center the page vertically
-                scaled_page_height = page.mediabox.height * scale
+                scaled_page_height = page.mediabox.height
                 y_offset = (height - scaled_page_height) / 2  # Center vertically
-                print(y_offset)
 
 
                 # Translate the page to the correct position
