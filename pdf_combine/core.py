@@ -29,10 +29,8 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2)
                 page = reader.pages[i + j]
 
                 # Calculate the scale factor to maintain aspect ratio
-                scale_x = (width / 2) / page.mediabox.width
-                #print(f"width: {width}, page.mediabox.width: {page.mediabox.width}, scale_x: {scale_x}")
-                scale_y = height / page.mediabox.height
-                #print(f"height: {height}, page.mediabox.height: {page.mediabox.height}, scale_y: {scale_y}")
+                scale_x = page_width / page.mediabox.width
+                scale_y = page_height / page.mediabox.height
                 scale = min(scale_x, scale_y)  # Use the smaller scale to ensure it fits
 
                 page.scale_by(scale)
