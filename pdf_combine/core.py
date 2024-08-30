@@ -22,7 +22,7 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2)
         page_width = width / cols
         page_height = height / rows
 
-        positions = [(col * page_width, row * page_height) for row in range(rows) for col in range(cols)]
+        positions = [(col * page_width, (rows - 1 - row) * page_height) for row in range(rows) for col in range(cols)]
 
         for j in range(rows*cols):
             if i + j < num_pages:
