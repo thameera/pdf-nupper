@@ -1,11 +1,12 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "pdf-combine"
 version = "0.1.0"
 description = "A command-line tool for n-upping PDF files (e.g., combining 2 pages into one) for printing purposes."
+readme = "README.md"
 authors = [{ name = "Thameera Senanayaka", email = "me@thameera.com" }]
 requires-python = ">=3.6"
 keywords = ["PDF", "n-up", "combine", "printing"]
