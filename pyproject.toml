@@ -6,22 +6,22 @@ build-backend = "setuptools.build_meta"
 name = "pdf-combine"
 version = "0.1.0"
 description = "A command-line tool for n-upping PDF files (e.g., combining 2 pages into one) for printing purposes."
-authors = [
-    { name = "Thameera Senanayaka", email = "me@thameera.com" }
-]
+authors = [{ name = "Thameera Senanayaka", email = "me@thameera.com" }]
 requires-python = ">=3.6"
 keywords = ["PDF", "n-up", "combine", "printing"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
 ]
-dependencies = [
-    "pypdf>=4.3.0"
-]
+dependencies = ["pypdf>=4.3.0"]
 
 [project.scripts]
 pdf-combine = "pdf_combine.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/thameera/pdf-combine"
+"Bug Tracker" = "https://github.com/thameera/pdf-combine/issues"
 
 [tool.setuptools.packages.find]
 include = ["pdf_combine"]
