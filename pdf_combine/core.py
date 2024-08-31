@@ -9,6 +9,8 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2)
     writer = PdfWriter()
 
     num_pages = len(reader.pages)
+    pages_per_sheet = rows*cols
+
     if is_landscape:
         width = A4_HEIGHT
         height = A4_WIDTH
@@ -16,7 +18,7 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2)
         width = A4_WIDTH
         height = A4_HEIGHT
 
-    for i in range(0, num_pages, rows*cols):
+    for i in range(0, num_pages, pages_per_sheet):
         new_page = writer.add_blank_page(width=width, height=height)
 
         page_width = width / cols
@@ -24,7 +26,7 @@ def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2)
 
         positions = [(col * page_width, (rows - 1 - row) * page_height) for row in range(rows) for col in range(cols)]
 
-        for j in range(rows*cols):
+        for j in range(pages_per_sheet):
             if i + j < num_pages:
                 page = reader.pages[i + j]
 
