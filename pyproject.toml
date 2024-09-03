@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pdf-nupper"
-version = "0.1.1"
+version = "0.1.2"
 description = "A command-line tool for n-upping PDF files (e.g., combining 2 pages into one) for printing purposes."
 readme = "README.md"
 authors = [{ name = "Thameera Senanayaka", email = "me@thameera.com" }]
