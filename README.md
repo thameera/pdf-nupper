@@ -1,6 +1,8 @@
 # pdf-nupper
 
-`pdf-nupper` is a Python command-line tool for merging multiple pages of a PDF into a single page.This is also called 'n-up' (hence the name). This is particularly useful for printing purposes, where you might want to fit multiple pages onto one sheet of paper.
+[![PyPI](https://img.shields.io/pypi/v/pdf-nupper?label=pypi%20package&color=blue)](https://pypi.org/project/pdf-nupper/)
+
+`pdf-nupper` is a Python command-line tool for merging multiple pages of a PDF into a single page.This is also called 'n-up' (hence the name). This is particularly useful for printing purposes, where you might want to fit multiple pages onto one sheet of paper. For example, in a lecture note where each page is a slide, you can use pdf-nupper to fit 4 pages in one sheet.
 
 ## Usage
 
