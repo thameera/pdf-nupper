@@ -1,6 +1,6 @@
 import argparse
 import re
-from .core import combine
+from .core import nup
 
 def validate_layout(layout):
     if not re.match(r'^\d+x\d+$', layout):
@@ -18,7 +18,7 @@ def main():
 
     rows, cols = map(int, args.layout.split("x"))
 
-    combine(args.input_pdf, args.output_pdf, args.landscape, rows, cols)
+    nup(args.input_pdf, args.output_pdf, args.landscape, rows, cols)
 
 if __name__ == "__main__":
     main()

@@ -1,11 +1,11 @@
-# pdf-combine
+# pdf-nupper
 
-`pdf-combine` is a Python command-line tool designed for merging multiple pages of a PDF into a single page.This is also called 'n-up'. This is particularly useful for printing purposes, where you might want to fit multiple pages onto one sheet of paper.
+`pdf-nupper` is a Python command-line tool for merging multiple pages of a PDF into a single page.This is also called 'n-up' (hence the name). This is particularly useful for printing purposes, where you might want to fit multiple pages onto one sheet of paper.
 
 ## Usage
 
 ```bash
-pdf-combine input.pdf output.pdf [-l] [-n LAYOUT]
+pdf-nupper input.pdf output.pdf [-l] [-n LAYOUT]
 ```
 
 ### Arguments:
@@ -22,22 +22,22 @@ pdf-combine input.pdf output.pdf [-l] [-n LAYOUT]
 
 1. Basic usage (default 1x2 layout in portrait mode):
    ```bash
-   pdf-combine input.pdf output.pdf
+   pdf-nupper input.pdf output.pdf
    ```
 
 2. Using landscape mode:
    ```bash
-   pdf-combine input.pdf output.pdf -l
+   pdf-nupper input.pdf output.pdf -l
    ```
 
 3. Custom layout (2x2 in portrait mode):
    ```bash
-   pdf-combine input.pdf output.pdf -n 2x2
+   pdf-nupper input.pdf output.pdf -n 2x2
    ```
 
 4. Custom layout in landscape mode:
    ```bash
-   pdf-combine input.pdf output.pdf -l -n 2x4
+   pdf-nupper input.pdf output.pdf -l -n 2x4
    ```
 
 Note: The layout should be specified as "NxM" where N and M are positive integers representing the number of rows and columns respectively.

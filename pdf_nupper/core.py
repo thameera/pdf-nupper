@@ -4,7 +4,7 @@ from pypdf.generic import RectangleObject
 A4_WIDTH = 595.28  # A4 width in points
 A4_HEIGHT = 841.89  # A4 height in points
 
-def combine(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2):
+def nup(input_pdf_path, output_pdf_path, is_landscape=False, rows=1, cols=2):
     reader = PdfReader(input_pdf_path)
     writer = PdfWriter()
 
